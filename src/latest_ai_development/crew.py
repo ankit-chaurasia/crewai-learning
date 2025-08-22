@@ -23,14 +23,16 @@ class LatestAiDevelopment():
     def researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['researcher'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            llm="ollama/gemma3:latest",
         )
 
     @agent
     def reporting_analyst(self) -> Agent:
         return Agent(
             config=self.agents_config['reporting_analyst'], # type: ignore[index]
-            verbose=True
+            verbose=True,
+            llm="ollama/gemma3:latest",
         )
 
     # To learn more about structured task outputs,
